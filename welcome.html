@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <title>报名单</title>
+
+
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  </head>
+  <body>
+  <div class="panel panel-primary">
+<div class="panel-heading">
+<h3 class="text-center">橙果工作室报名单</h3></div>
+<div class="panel-body">
+  <form role="form" action="http://nic.qlucs.top/orangestudio/action.php" method="post" name="form" id="form" onsubmit="return check()">
+   <div class="form-group">
+<table class="table table-striped"><tbody>
+
+    <tr>
+    <tr><div class="text-left">
+    <h4>姓名:</h4>
+    </div></tr>
+    <tr><div class="container"><div class="row"><input class="form-control" type="text" name="name" id="name"></div></div></tr>
+    </tr>
+
+    <tr>
+    <tr><div class="text-left">
+    <h4>学号</h4>
+    </div></tr>
+    <tr><div class="container"><div class="row"><input class="form-control" type="text" name="xuehao" id="xuehao"></div></div></tr>
+    </tr>
+
+    <tr>
+    <tr><div class="text-left">
+    <h4>手机号:</h4>
+    </div></tr>
+    <tr><div class="container"><div class="row"><input class="form-control" type="text" name="phone" id="phone"></div></div></tr>
+    </tr>
+
+   <tr>
+    <tr><div class="text-left">
+    <h4>班级</h4>
+    </div></tr>
+    <tr><div class="container"><div class="row"><input class="form-control" type="text" name="zhuanye" id="zhuanye"></div></div></tr>
+    </tr>
+
+    <tr>
+    <tr>&nbsp;</tr>
+    </tr>
+  
+   <tr><div class="text-left">
+    <h4>性别</h4>
+    </div></tr>
+  <div class="container"><div class="row"> <div class="col-xs-12">
+   <select  name="sex" id="sex" class="form-control">  
+                          <option value="男">男</option>   
+                          <option value="女">女</option>           
+                    </select>  </div>
+ 
+                    </div></div>
+
+
+    <tr>
+    <tr>
+        <h4>自我介绍：</h4>
+    </tr>
+        <textarea name="content" id="content" class="form-control" rows="3"></textarea>
+    </tr>
+    <tr><br/>
+      <input name="submit" id="submit" type="submit" class="btn btn-primary btn-md" value="报名"/></tr>
+
+</tbody></table>
+</div>
+</form>
+</div>
+<br/><br/>
+<div>©齐鲁工业大学 网络信息部</div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/assets/js/checkform.min.js"></script>
+<script type="text/javascript">
+//try 
+//{ 
+function check(){
+    var phonecheck = /^13[0-9]{9}$|^15[0-9]{9}$|^17[0-9]{9}|^18[0-9]{9}$/;
+    var phonecheck = new RegExp(phonecheck);
+        if(document.getElementById('name').value==''){
+      alert("请填写姓名！");
+      return false;
+    }
+    if(document.getElementById('xuehao').value.length!=12){
+      alert("请填写正确学号！");
+      return false;
+    }
+    if(document.getElementById('zhuanye').value==''){
+      alert("请填写班级！");
+      return false;
+    }
+    if(!phonecheck.test(document.getElementById('phone').value)){
+        alert("手机号错误！");
+        return false;
+    }else{
+        //$("#success").show().fadeOut(3000);
+        return true;
+    }
+}
+</script>
+  </body>
+</html>

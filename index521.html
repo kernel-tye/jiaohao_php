@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<title>激活成功</title>
+	<style>
+		#animation{
+			-webkit-animation:flipInX 1s .2s ease both;
+			-moz-animation:flipInX 1s .2s ease both;
+		}
+		@-webkit-keyframes flipInX{
+			0%{-webkit-transform:perspective(400px) rotateX(90deg);
+			opacity:0}
+			40%{-webkit-transform:perspective(400px) rotateX(-10deg)}
+			70%{-webkit-transform:perspective(400px) rotateX(10deg)}
+			100%{-webkit-transform:perspective(400px) rotateX(0deg);
+			opacity:1}
+		}
+		@-moz-keyframes flipInX{
+			0%{-moz-transform:perspective(1000px) rotateX(90deg);
+			opacity:0}
+			40%{-moz-transform:perspective(1000px) rotateX(-10deg)}
+			70%{-moz-transform:perspective(1000px) rotateX(10deg)}
+			100%{-moz-transform:perspective(1000px) rotateX(0deg);
+			opacity:1}
+		}
+		.demo{
+			width: 80%;
+			height: auto;
+			background-color: #33CCFF;
+			margin:30px auto;
+			text-align: center;
+			margin-top: 14%;
+		}
+		#now{
+			text-align: center;
+			width: 100%;
+			height: 50%;
+			margin: auto;
+			color: #ffffff;
+		}
+		#now p {
+			font-size: 100px;
+		}
+		
+		body{
+			background-color: #33CCFF;
+		}
+		#footer{
+			position: absolute;
+			width: auto;
+			height: auto;
+			background-color: #33CCFF;
+			
+			margin-bottom: 0px;
+			text-align: center;
+			color: #ffffff;
+			left: 0;
+			right: 0;
+			top:90%;
+		}
+	</style>
+</head>
+<body>
+	<div id="animation" class="demo">
+		<div id="now">
+			<p >激活成功</p>
+		</div>
+	
+	</div> 
+</body>
+</html>
